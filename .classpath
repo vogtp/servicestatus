@@ -13,172 +13,37 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/mte.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/modelinggateway90.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/ncm90.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/utilapp90.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/sbgwimport90.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/clientapp.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/ehealth.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/ems90.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/processd.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/utilgui90.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/utilnet90.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/productsuite90.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/global90.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/ssorb90.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/ssorbutil90.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/snmpsrv90.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/vbhelper90.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/omi90.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/util90.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/controlpanel.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/mindterm.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/utilsrv90.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/AdventNetSnmp.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/AdventNetLogging.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/jsafeJCEFIPS.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/lm.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/vbjorb.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/vbsec.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/sanct6.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/sanctuary.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/jdom.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/commons-collections.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/usr/SPECTRUM/lib/crimson.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="lib" path="/unibasSsorbWrapper/unibasUnibasSsorbWrapper.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/unibasSsorbWrapper"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/clientapp.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/ems90.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/global90.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/jsafeJCEFIPS.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/lm.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/mindterm.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/modelinggateway90.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/mte.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/ncm90.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/omi90.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/processd.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/productsuite90.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/sanct6.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/sanctuary.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/sbgwimport90.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/snmpsrv90.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/ssorb90.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/ssorbutil90.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/util90.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/utilapp90.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/utilgui90.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/utilnet90.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/utilsrv90.jar" sourcepath="/unibasSsorbWrapper/src/com">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/home/vogtp/workspace/SSORB/SDK/docs/SSORB/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/vbhelper90.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/vbjorb.jar"/>
+	<classpathentry kind="lib" path="/unibasSsorbWrapper/lib/vbsec.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
