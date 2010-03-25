@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="createWar" name="servicestatus">
+	<property name="warfile" value="servicestatus"/>
+    <property environment="env"/> 
+    <property name="SSORB.location" value="../SSORB"/>
+    <property name="ECLIPSE_HOME" value="../../eclipse"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <path id="Apache Tomcat v6.0 [Apache Tomcat v6.0].libraryclasspath">
+        <pathelement location="../../apache-tomcat-6.0.18/lib/catalina-ant.jar"/>
+        <pathelement location="../../apache-tomcat-6.0.18/lib/catalina-ha.jar"/>
+        <pathelement location="../../apache-tomcat-6.0.18/lib/jasper-el.jar"/>
+        <pathelement location="../../apache-tomcat-6.0.18/lib/jsp-api.jar"/>
+        <pathelement location="../../apache-tomcat-6.0.18/lib/catalina.jar"/>
+        <pathelement location="../../apache-tomcat-6.0.18/lib/tomcat-coyote.jar"/>
+        <pathelement location="../../apache-tomcat-6.0.18/lib/tomcat-dbcp.jar"/>
+        <pathelement location="../../apache-tomcat-6.0.18/lib/servlet-api.jar"/>
+        <pathelement location="../../apache-tomcat-6.0.18/lib/jasper.jar"/>
+        <pathelement location="../../apache-tomcat-6.0.18/lib/tomcat-i18n-ja.jar"/>
+        <pathelement location="../../apache-tomcat-6.0.18/lib/jasper-jdt.jar"/>
+        <pathelement location="../../apache-tomcat-6.0.18/lib/tomcat-i18n-es.jar"/>
+        <pathelement location="../../apache-tomcat-6.0.18/lib/tomcat-i18n-fr.jar"/>
+        <pathelement location="../../apache-tomcat-6.0.18/lib/el-api.jar"/>
+        <pathelement location="../../apache-tomcat-6.0.18/lib/annotations-api.jar"/>
+        <pathelement location="../../apache-tomcat-6.0.18/lib/catalina-tribes.jar"/>
+    </path>
+    <path id="Web App Libraries.libraryclasspath">
+        <pathelement location="../../../../SSORB"/>
+    </path>
+    <path id="EAR Libraries.libraryclasspath"/>
+    <path id="servicestatus.classpath">
+        <pathelement location="build/classes"/>
+        <path refid="Apache Tomcat v6.0 [Apache Tomcat v6.0].libraryclasspath"/>
+        <path refid="Web App Libraries.libraryclasspath"/>
+        <path refid="EAR Libraries.libraryclasspath"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/mte.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/modelinggateway90.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/ncm90.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/utilapp90.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/sbgwimport90.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/clientapp.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/ehealth.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/ems90.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/processd.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/utilgui90.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/utilnet90.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/productsuite90.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/global90.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/ssorb90.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/ssorbutil90.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/snmpsrv90.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/vbhelper90.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/omi90.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/util90.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/controlpanel.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/mindterm.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/utilsrv90.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/AdventNetSnmp.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/AdventNetLogging.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/jsafeJCEFIPS.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/lm.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/vbjorb.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/vbsec.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/sanct6.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/sanctuary.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/jdom.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/commons-collections.jar"/>
+        <pathelement location="../../../../usr/SPECTRUM/lib/crimson.jar"/>
+        <pathelement location="${SSORB.location}/unibas_spectrum.jar"/>
+    </path>
+	<target name="createWar">
+	<war destfile="${warfile}.war" webxml="WebContent/WEB-INF/web.xml" update="true">
+	<classes dir="build\classes"/>
+	<fileset dir="WebContent">
+	<exclude name="WEB-INF/web.xml"/>
+	</fileset>
+	</war>
+		</target>
+</project>
