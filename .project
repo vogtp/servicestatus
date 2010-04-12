@@ -4,6 +4,7 @@
 	<comment></comment>
 	<projects>
 		<project>SSORB</project>
+		<project>unibasSsorbWrapper</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
