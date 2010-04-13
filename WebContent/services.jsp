@@ -5,7 +5,8 @@
 <%@page import="ch.unibas.spectrum.ssorb.model.ServiceModel"%>
 <%@page import="java.util.Map"%>
 <%@page import="ch.unibas.spectrum.ssorb.model.Model"%>
-<html >
+
+<%@page import="java.text.DecimalFormat"%><html >
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
 <title>Spectrum Services</title>
@@ -17,6 +18,7 @@
 <body style="background-color: #F5F5F3;">
 <div id='content' style="text-align: left; background-color: transparent;" > 
 <%
+DecimalFormat availibityFormat = new DecimalFormat("#.###");
 ServiceModel sm = (ServiceModel)request.getSession().getAttribute("Service");
 boolean link = Boolean.parseBoolean(request.getParameter("link"));
 if (sm == null){
@@ -34,10 +36,11 @@ if (sm == null){
 
 <table style="width: 100%; background-color: transparent;">
   <col width="5%" />
-  <col width="65%" />
-  <col width="30%" />
+  <col width="45%" />
+  <col width="25%" />
+  <col width="35%" />
 <thead style="font-weight: bold;">
-<tr><TD></TD><TD>Service</TD><td>Status</td></tr>
+<tr><TD></TD><TD>Service</TD><TD>Verf&uuml;gbarkeit</TD><td>Status</td></tr>
 </thead>
 <tbody>
 <%
@@ -46,7 +49,7 @@ for (Map.Entry<String, Model> e : children.entrySet()) {
 	Model model = e.getValue();
 	boolean serviceModel = model.getModelClass() == 50;
 	boolean ref = link && serviceModel;
-	if (!serviceModel){
+	if (!serviceModel){ 
 		continue; // only display services 
 	}
 %>
@@ -55,6 +58,18 @@ for (Map.Entry<String, Model> e : children.entrySet()) {
 <td>		<% if (ref) { %><a href="?id=<%=model.getID() %><% if(link){ %>&link=true<%}%> "> <%} %>
 		 	<%= e.getKey() %> 
 		 <% if (ref) { %></a><%} %>
+</td>
+<td>
+<%
+String availString;
+float avail = ((ServiceModel)model).getAvailability();
+if (avail > 100) {
+	avail = 100;
+} else if (avail < 0){
+	avail = 0;
+}
+availString = availibityFormat.format(avail);
+%> <%= availString%>%
 </td>
 <td>		 <%=model.getUserStatusString()  %>
 <!-- 
