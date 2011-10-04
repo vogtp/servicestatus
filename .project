@@ -3,7 +3,6 @@
 	<name>servicestatus</name>
 	<comment></comment>
 	<projects>
-		<project>SSORB</project>
 		<project>unibasSsorbWrapper</project>
 	</projects>
 	<buildSpec>
@@ -29,11 +28,11 @@
 		</buildCommand>
 		<buildCommand>
 			<name>org.eclipse.ui.externaltools.ExternalToolBuilder</name>
-			<triggers>full,incremental,</triggers>
+			<triggers>auto,full,incremental,</triggers>
 			<arguments>
 				<dictionary>
 					<key>LaunchConfigHandle</key>
-					<value>&lt;project&gt;/.externalToolBuilders/war ant script.launch</value>
+					<value>&lt;project&gt;/.externalToolBuilders/New_Builder.launch</value>
 				</dictionary>
 			</arguments>
 		</buildCommand>

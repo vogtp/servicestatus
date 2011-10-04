@@ -30,6 +30,7 @@ public class ServiceStatus extends HttpServlet {
 	@Override
 	public void init() throws ServletException {
 		super.init();
+		DomainHelper.setSpectroServer("spectrum");
 		DomainHelper.setUsername("ServiceStatus");
 		// DomainHelper.setPassword("password");
 	}

@@ -52,7 +52,7 @@
 	<thead style="font-weight: bold;">
 		<tr>
 			<TD></TD>
-			<TD>Service</TD>
+			<TD>Service2</TD>
 			<TD>Verf&uuml;gbarkeit</TD>
 			<td>Status</td>
 		</tr>
@@ -81,7 +81,10 @@
 						if (link) {%>&link=true<%};
 						if (models) {%>&models=true<%};%> ">
 			<%
-				}
+				} else if (!serviceModel) {
+					%><a href="http://<%=e.getKey()%>">
+				<%
+					}
 			%> <%=e.getKey()%> <%
  	if (ref) {
  %>
@@ -100,14 +103,26 @@
 							}
 							availString = availibityFormat.format(avail) + "%";
 							if (avail < 0) {
-								availString = "n.a.";
+								availString = "n.a."; 
 							}
 						} else {
 							if ("UpsApc92xx".equals(model.getMType())){
 								try{
 									availString = model.getAttributeFromTable(Attribute.APCTemperature,2) + " &deg;C";
+									try{
+										availString = availString + " ("+model.getAttributeFromTable(Attribute.APCTemperatureHighTresh,2) + " &deg;C)";
+									}catch(Exception e2){
+										//availString = availString + " ("+Attribute.APCTemperatureHighTresh+")";
+									}
 								}catch(Exception e1){
 									availString = "";
+								}
+								if ("".equals( availString )){
+									try{
+										availString = model.getAttributeFromTable(Attribute.APCTemperatureUPS,2) + " &deg;C";
+									}catch(Exception e1){
+										availString = "";
+									}
 								}
 							}else{
 							availString = "";

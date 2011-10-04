@@ -3,10 +3,83 @@
     <wb-module deploy-name="servicestatus">
         <wb-resource deploy-path="/" source-path="/WebContent"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <dependent-module archiveName="SSORB.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/SSORB/SSORB">
+        <wb-resource deploy-path="/images" source-path="/WebContent/images"/>
+        <dependent-module archiveName="unibasSsorbWrapper.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/unibasSsorbWrapper/unibasSsorbWrapper">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="unibasSsorbWrapper.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/unibasSsorbWrapper/unibasSsorbWrapper">
+        <dependent-module archiveName="mte.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/mte.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="processd.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/processd.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mindterm.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/mindterm.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="clientapp.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/clientapp.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="lm.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/lm.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="vbsec.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/vbsec.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jsafeJCEFIPS.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/jsafeJCEFIPS.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="sanctuary.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/sanctuary.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="vbjorb.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/vbjorb.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="sanct6.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/sanct6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ems90.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/ems90.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="vbhelper90.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/vbhelper90.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="snmpsrv90.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/snmpsrv90.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="sbgwimport90.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/sbgwimport90.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="utilnet90.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/utilnet90.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="global90.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/global90.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="utilgui90.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/utilgui90.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ssorb90.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/ssorb90.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="utilapp90.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/utilapp90.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="util90.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/util90.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="productsuite90.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/productsuite90.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ncm90.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/ncm90.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ssorbutil90.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/ssorbutil90.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="omi90.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/omi90.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="utilsrv90.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/unibasSsorbWrapper/lib/utilsrv90.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="context-root" value="servicestatus"/>
