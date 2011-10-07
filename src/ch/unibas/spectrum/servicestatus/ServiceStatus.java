@@ -53,6 +53,13 @@ public class ServiceStatus extends HttpServlet {
 
 	private void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
+
+		String display = request.getParameter("display");
+		String jsp = "services.jsp";
+		if (display != null && !"".equals(display)) {
+			jsp = display + ".jsp";
+		}
+
 		String modelID = request.getParameter("id");
 		ServiceModel smNew = null;
 		try {
@@ -74,7 +81,7 @@ public class ServiceStatus extends HttpServlet {
 			throw new ServletException(e);
 		}
 
-		RequestDispatcher view = request.getRequestDispatcher("services.jsp");
+		RequestDispatcher view = request.getRequestDispatcher(jsp);
 		view.forward(request, response);
 
 	}

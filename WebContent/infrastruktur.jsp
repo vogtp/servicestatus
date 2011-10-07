@@ -21,8 +21,12 @@
 <link rel="stylesheet" type="text/css"
 	href="http://urz.unibas.ch/css/main.css" title="Default Style"
 	media="screen" />
+	<style type="text/css">
+	td: padding-right: 5ex;
+	</style>
 </head>
-<body style="width: 500px; background-color: #F5F5F3;">
+<body background-color: #F5F5F3;">
+<!-- <body style="width: 1000px; background-color: #F5F5F3;"> -->
 <div id='content'
 	style="text-align: left; background-color: transparent;">
 <%
@@ -44,17 +48,15 @@
  -->
 <div class="text">
 
-<table style="width: 100%; background-color: transparent;">
-	<col width="5%" />
-	<col width="45%" />
-	<col width="25%" />
-	<col width="35%" />
+<table style=" background-color: transparent;">
 	<thead style="font-weight: bold;">
 		<tr>
 			<TD></TD>
 			<TD>Service</TD>
-			<TD>Verf&uuml;gbarkeit</TD>
+			<TD>Temperatur</TD>
+			<TD>Max</TD>
 			<td>Status</td>
+			<td>Kabel Management</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -77,7 +79,7 @@
 			<%
 				if (ref) {
 			%><a
-				href="?id=<%=model.getID()%><%
+				href="?id=<%=model.getID()%>&display=infrastruktur<%
 						if (link) {%>&link=true<%};
 						if (models) {%>&models=true<%};%> ">
 			<%
@@ -86,12 +88,6 @@
 				<%
 					}
 			
-			try{
-				String loc = "";
-				//loc = model.getAttributeAsString(0x1102e);
-				%><%=loc %><% 
-			}catch(Exception e2){
-			}
 			%> <%=e.getKey()%> <%
  	if (ref) {
  %>
@@ -100,46 +96,61 @@
 				}
 			%>
 			</td>
-			<td>
+			
 			<%
-				String availString;
+				String temperature;
+				String temperatureMax = "";
 						if (serviceModel) {
 							float avail = ((ServiceModel) model).getAvailability();
 							if (avail > 100) {
 								avail = 100;
 							}
-							availString = availibityFormat.format(avail) + "%";
+							temperature = availibityFormat.format(avail) + "%";
 							if (avail < 0) {
-								availString = "n.a."; 
+								temperature = "n.a."; 
 							}
 						} else {
 							if ("UpsApc92xx".equals(model.getMType())){ 
 								try{
-									availString = model.getAttributeFromTable(Attribute.APCTemperature,2) + " &deg;C";
+									temperature = model.getAttributeFromTable(Attribute.APCTemperature,2) + " &deg;C";
 									try{
-										availString = availString + " ("+model.getAttributeFromTable(0x21d0782,2) + " &deg;C)";
+										temperatureMax = model.getAttributeFromTable(0x21d0782,2) + " &deg;C";
 									}catch(Exception e2){
 									}
 								}catch(Exception e1){
-									availString = "";
+									temperature = "";
 								}
-								if ("".equals( availString )){
+								if ("".equals( temperature )){
 									try{
-										availString = model.getAttributeFromTable(Attribute.APCTemperatureUPS,2) + " &deg;C";
+										temperature = model.getAttributeFromTable(Attribute.APCTemperatureUPS,2) + " &deg;C";
 										try{
-											availString = availString + " ("+model.getAttributeFromTable(0x21d0554,2) + " &deg;C)";
+											temperatureMax = model.getAttributeFromTable(0x21d0554,2) + " &deg;C";
 										}catch(Exception e2){ 
 										}
 									}catch(Exception e1){
-										availString = "";
+										temperature = "";
 									}
 								}
 							}else{
-							availString = "";
+							temperature = "";
 							}
 						}
-			%> <%=availString%></td>
-			<td><%=model.getUserStatusString()%> <!-- 
+			%> 
+			<td><%=temperature%></td>
+			<td><%=temperatureMax%></td>
+			<td><%=model.getUserStatusString()%> </td>
+			<%
+
+			try{
+				String loc = "";
+				loc = model.getAttributeAsString(0x1102e);
+				%><td><a href="<%=loc %>">Kabel Management</a></td><% 
+			}catch(Exception e2){
+			}
+			%>
+			
+			
+			<!-- 
 		Status: <%=model.getStatus()%>
 	    <%=model.getMType()%>	(0x<%=Integer.toHexString(model.getID())%>)
 		ModelClass: <%=model.getModelClass()%>

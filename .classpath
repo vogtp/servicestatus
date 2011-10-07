@@ -14,14 +14,12 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/unibasSsorbWrapper"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/unibasUnibasSsorbWrapper.jar"/>
 	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/clientapp.jar"/>
 	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/ems90.jar"/>
 	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/global90.jar"/>
 	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/jsafeJCEFIPS.jar"/>
 	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/lm.jar"/>
 	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/mindterm.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/modelinggateway90.jar"/>
 	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/mte.jar"/>
 	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/ncm90.jar"/>
 	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/omi90.jar"/>
