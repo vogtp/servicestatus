@@ -22,13 +22,12 @@
 	href="http://urz.unibas.ch/css/main.css" title="Default Style"
 	media="screen" />
 	<style type="text/css">
-	td: padding-right: 5ex;
+	td { padding-right: 15pt;}
 	</style>
 </head>
-<body background-color: #F5F5F3;">
+<body >
 <!-- <body style="width: 1000px; background-color: #F5F5F3;"> -->
-<div id='content'
-	style="text-align: left; background-color: transparent;">
+<div style="text-align: left; background-color: transparent;">
 <%
 	DecimalFormat availibityFormat = new DecimalFormat("#.###");
 	ServiceModel sm = (ServiceModel) request.getSession().getAttribute("Service");
@@ -56,7 +55,7 @@
 			<TD>Temperatur</TD>
 			<TD>Max</TD>
 			<td>Status</td>
-			<td>Kabel Management</td>
+			<td>Sys Location</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -114,17 +113,18 @@
 								try{
 									temperature = model.getAttributeFromTable(Attribute.APCTemperature,2) + " &deg;C";
 									try{
-										temperatureMax = model.getAttributeFromTable(0x21d0782,2) + " &deg;C";
+										temperatureMax = model.getAttributeFromTable(Attribute.APCTemperatureHighTresh,2) + " &deg;C";
 									}catch(Exception e2){
 									}
 								}catch(Exception e1){
-									temperature = "";
+									
+									temperature = ""; 
 								}
 								if ("".equals( temperature )){
 									try{
 										temperature = model.getAttributeFromTable(Attribute.APCTemperatureUPS,2) + " &deg;C";
 										try{
-											temperatureMax = model.getAttributeFromTable(0x21d0554,2) + " &deg;C";
+											temperatureMax = model.getAttributeFromTable(Attribute.APCTemperatureUpsHighTresh,2) + " &deg;C";
 										}catch(Exception e2){ 
 										}
 									}catch(Exception e1){
@@ -143,8 +143,14 @@
 
 			try{
 				String loc = "";
-				loc = model.getAttributeAsString(0x1102e);
-				%><td><a href="<%=loc %>">Kabel Management</a></td><% 
+				loc = model.getAttribute(Attribute.DeviceLocation);
+				%><td> <%
+				if (loc != null && (loc.indexOf("http://")>-1 ||loc.indexOf("https://")>-1 ) ){
+				%><a href="<%=loc %>">Cable Management</a><% 
+				}else{
+					%><%=loc %><%
+				}
+				%></td><% 
 			}catch(Exception e2){
 			}
 			%>

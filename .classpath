@@ -13,7 +13,6 @@
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/unibasSsorbWrapper"/>
 	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/clientapp.jar"/>
 	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/ems90.jar"/>
 	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/global90.jar"/>
@@ -39,5 +38,6 @@
 	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/vbhelper90.jar"/>
 	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/vbjorb.jar"/>
 	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/vbsec.jar"/>
+	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/unibasUnibasSsorbWrapper.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

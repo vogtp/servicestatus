@@ -58,12 +58,12 @@ public class ServiceStatus extends HttpServlet {
 		String jsp = "services.jsp";
 		if (display != null && !"".equals(display)) {
 			jsp = display + ".jsp";
-		}
+		} 
 
 		String modelID = request.getParameter("id");
 		ServiceModel smNew = null;
 		try {
-			if (modelID != null) {
+			if (modelID != null) { 
 				try {
 					smNew = ServiceAccess.getServiceByID(Integer.parseInt(modelID));
 				} catch (NumberFormatException e) {

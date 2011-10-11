@@ -30,9 +30,6 @@
         <pathelement location="../../apache-tomcat-6.0.18/lib/annotations-api.jar"/>
         <pathelement location="../../apache-tomcat-6.0.18/lib/catalina-tribes.jar"/>
     </path>
-    <path id="Web App Libraries.libraryclasspath">
-        <pathelement location="../../../../SSORB"/>
-    </path>
     <path id="EAR Libraries.libraryclasspath"/>
     <path id="servicestatus.classpath">
         <pathelement location="build/classes"/>
