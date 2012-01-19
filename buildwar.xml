@@ -7,7 +7,7 @@
 <project basedir="." default="createWar" name="servicestatus">
 	<property name="warfile" value="servicestatus"/>
     <property environment="env"/> 
-    <property name="SSORB.location" value="../SSORB"/>
+    <property name="unibasSsorbWrapper.location" value="../unibasSsorbWrapper/"/>
     <property name="ECLIPSE_HOME" value="../../eclipse"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.6"/>
@@ -36,28 +36,26 @@
         <path refid="Apache Tomcat v6.0 [Apache Tomcat v6.0].libraryclasspath"/>
         <path refid="Web App Libraries.libraryclasspath"/>
         <path refid="EAR Libraries.libraryclasspath"/>
-        <pathelement location="lib/mte.jar"/>
-        <pathelement location="${unibasSsorbWrapper.location}lib/modelinggateway90.jar"/>
-        <pathelement location="${unibasSsorbWrapper.location}lib/ncm90.jar"/>
-        <pathelement location="${unibasSsorbWrapper.location}lib/utilapp90.jar"/>
-        <pathelement location="${unibasSsorbWrapper.location}lib/sbgwimport90.jar"/>
+        <pathelement location="${unibasSsorbWrapper.location}lib/ncm92.jar"/>
+        <pathelement location="${unibasSsorbWrapper.location}lib/utilapp92.jar"/>
+        <pathelement location="${unibasSsorbWrapper.location}lib/sbgwimport92.jar"/>
         <pathelement location="${unibasSsorbWrapper.location}lib/clientapp.jar"/>
         <pathelement location="${unibasSsorbWrapper.location}lib/ehealth.jar"/>
-        <pathelement location="${unibasSsorbWrapper.location}lib/ems90.jar"/>
+        <pathelement location="${unibasSsorbWrapper.location}lib/ems92.jar"/>
         <pathelement location="${unibasSsorbWrapper.location}lib/processd.jar"/>
-        <pathelement location="${unibasSsorbWrapper.location}lib/utilgui90.jar"/>
-        <pathelement location="${unibasSsorbWrapper.location}lib/utilnet90.jar"/>
-        <pathelement location="${unibasSsorbWrapper.location}lib/productsuite90.jar"/>
-        <pathelement location="${unibasSsorbWrapper.location}lib/global90.jar"/>
-        <pathelement location="${unibasSsorbWrapper.location}lib/ssorb90.jar"/>
-        <pathelement location="${unibasSsorbWrapper.location}lib/ssorbutil90.jar"/>
-        <pathelement location="${unibasSsorbWrapper.location}lib/snmpsrv90.jar"/>
-        <pathelement location="${unibasSsorbWrapper.location}lib/vbhelper90.jar"/>
-        <pathelement location="${unibasSsorbWrapper.location}lib/omi90.jar"/>
-        <pathelement location="${unibasSsorbWrapper.location}lib/util90.jar"/>
+        <pathelement location="${unibasSsorbWrapper.location}lib/utilgui92.jar"/>
+        <pathelement location="${unibasSsorbWrapper.location}lib/utilnet92.jar"/>
+        <pathelement location="${unibasSsorbWrapper.location}lib/productsuite92.jar"/>
+        <pathelement location="${unibasSsorbWrapper.location}lib/global92.jar"/>
+        <pathelement location="${unibasSsorbWrapper.location}lib/ssorb92.jar"/>
+        <pathelement location="${unibasSsorbWrapper.location}lib/ssorbutil92.jar"/>
+        <pathelement location="${unibasSsorbWrapper.location}lib/snmpsrv92.jar"/>
+        <pathelement location="${unibasSsorbWrapper.location}lib/vbhelper92.jar"/>
+        <pathelement location="${unibasSsorbWrapper.location}lib/omi92.jar"/>
+        <pathelement location="${unibasSsorbWrapper.location}lib/util92.jar"/>
         <pathelement location="${unibasSsorbWrapper.location}lib/controlpanel.jar"/>
         <pathelement location="${unibasSsorbWrapper.location}lib/mindterm.jar"/>
-        <pathelement location="${unibasSsorbWrapper.location}lib/utilsrv90.jar"/>
+        <pathelement location="${unibasSsorbWrapper.location}lib/utilsrv92.jar"/>
         <pathelement location="${unibasSsorbWrapper.location}lib/AdventNetSnmp.jar"/>
         <pathelement location="${unibasSsorbWrapper.location}lib/AdventNetLogging.jar"/>
         <pathelement location="${unibasSsorbWrapper.location}lib/jsafeJCEFIPS.jar"/>

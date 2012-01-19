@@ -7,7 +7,6 @@
 <%@page import="ch.unibas.spectrum.ssorb.model.Model"%>
 
 <%@page import="java.text.DecimalFormat"%>
-<%@page import="com.mindbright.security.digest.MD2"%>
 <%@page import="ch.unibas.spectrum.ssorb.constants.Attribute"%><html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
@@ -75,29 +74,31 @@
 			</td>
 			<td>
 			<%
+				String refUrl = null;
 				if (ref) {
-			%><a
-				href="?id=<%=model.getID()%><%
-						if (link) {%>&link=true<%};
-						if (models) {%>&models=true<%};%> ">
-			<%
+					refUrl = "?id="+model.getID();
+					if (link) {
+						refUrl = refUrl +"&link=true";
+					};
+					if (models) {
+						refUrl = refUrl +"&models=true";
+					};
 				} else if (!serviceModel) {
-					%><a href="http://<%=e.getKey()%>">
-				<%
-					}
-			
-			try{
-				String loc = "";
-				//loc = model.getAttributeAsString(0x1102e);
-				%><%=loc %><% 
-			}catch(Exception e2){
-			}
-			%> <%=e.getKey()%> <%
- 	if (ref) {
- %>
-			</a>
-			<%
+					refUrl = "http://"+e.getKey();
 				}
+				String helpUrl = model.getAttribute(0x12a4b);//Attribute.Description);
+				
+				String serviceName = e.getKey();
+				if (helpUrl != null && ! "".equals(helpUrl.trim()) && !"n.a.".equals(helpUrl)){
+					serviceName = "<a target='_parent' href='http://urz.unibas.ch/go/"+helpUrl+"'>"+serviceName+"</a>";
+				}
+			%>  <%= serviceName %>
+
+			<% 
+
+			if (refUrl != null){
+				%> <a href='<%=  refUrl%>'>(goto)</a><% 
+			}
 			%>
 			</td>
 			<td>

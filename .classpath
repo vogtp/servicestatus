@@ -1,43 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
-		<attributes>
-			<attribute name="owner.project.facets" value="jst.java"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v6.0">
-		<attributes>
-			<attribute name="owner.project.facets" value="jst.web"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/clientapp.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/ems90.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/global90.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/jsafeJCEFIPS.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/lm.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/mindterm.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/mte.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/ncm90.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/omi90.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/processd.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/productsuite90.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/sanct6.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/sanctuary.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/sbgwimport90.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/snmpsrv90.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/ssorb90.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/ssorbutil90.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/util90.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/utilapp90.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/utilgui90.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/utilnet90.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/utilsrv90.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/vbhelper90.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/vbjorb.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/vbsec.jar"/>
-	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/unibasUnibasSsorbWrapper.jar"/>
+	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/global92.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/jsafeJCEFIPS.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/lm.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/sanct6.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/sanctuary.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/ssorb92.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/ssorbutil92.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/util92.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/utilapp92.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/utilnet92.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/utilsrv92.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/vbhelper92.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/vbjorb.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/lib/vbsec.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/unibasSsorbWrapper/unibasUnibasSsorbWrapper.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v6.0"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

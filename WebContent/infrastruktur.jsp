@@ -7,7 +7,6 @@
 <%@page import="ch.unibas.spectrum.ssorb.model.Model"%>
 
 <%@page import="java.text.DecimalFormat"%>
-<%@page import="com.mindbright.security.digest.MD2"%>
 <%@page import="ch.unibas.spectrum.ssorb.constants.Attribute"%><html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
@@ -97,7 +96,7 @@
 			</td>
 			
 			<%
-				String temperature;
+				String temperature = "";
 				String temperatureMax = "";
 						if (serviceModel) {
 							float avail = ((ServiceModel) model).getAvailability();
@@ -110,8 +109,9 @@
 							}
 						} else {
 							if ("UpsApc92xx".equals(model.getMType())){ 
+								String[] t = null; 
 								try{
-									temperature = model.getAttributeFromTable(Attribute.APCTemperature,2) + " &deg;C";
+									t = model.getAttributeTable(Attribute.APCTemperature);
 									try{
 										temperatureMax = model.getAttributeFromTable(Attribute.APCTemperatureHighTresh,2) + " &deg;C";
 									}catch(Exception e2){
@@ -120,9 +120,9 @@
 									
 									temperature = ""; 
 								}
-								if ("".equals( temperature )){
+								if (t == null){
 									try{
-										temperature = model.getAttributeFromTable(Attribute.APCTemperatureUPS,2) + " &deg;C";
+										t = model.getAttributeTable(Attribute.APCTemperatureUPS);
 										try{
 											temperatureMax = model.getAttributeFromTable(Attribute.APCTemperatureUpsHighTresh,2) + " &deg;C";
 										}catch(Exception e2){ 
@@ -130,6 +130,19 @@
 									}catch(Exception e1){
 										temperature = "";
 									}
+								}
+								if (t != null){
+									String lastValue = ""; 
+									for (int i = 0; i<t.length;i = i+2){
+										String ti = t[i];
+										if (!lastValue.equals(ti)){
+											temperature = temperature + ti + " ";
+											lastValue = ti; 
+										}
+									}
+								}
+								if (!"".equals(temperature.trim())){
+									temperature = temperature + "&deg;C";
 								}
 							}else{
 							temperature = "";
@@ -145,11 +158,28 @@
 				String loc = "";
 				loc = model.getAttribute(Attribute.DeviceLocation);
 				%><td> <%
-				if (loc != null && (loc.indexOf("http://")>-1 ||loc.indexOf("https://")>-1 ) ){
-				%><a href="<%=loc %>">Cable Management</a><% 
-				}else{
-					%><%=loc %><%
+				String text = "";
+				if (loc != null) {
+					int idx = loc.indexOf("https://");
+					if (idx == -1){
+						loc.indexOf("http://");
+					}
+					if (idx > -1){
+						String disp = "";
+						if (idx > 0){
+							disp = loc.substring(0, idx);
+							loc = loc.substring(idx, loc.length()).replace(" -", "");
+						}
+						text = "<a href='"+loc+"'>"+disp+"</a>";
+					}else{
+						text = loc;
+					}
+					
+				%><% 
 				}
+				
+				%><%=text %><%
+				
 				%></td><% 
 			}catch(Exception e2){
 			}
